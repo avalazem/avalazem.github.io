@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Travel - AVA</title>
-  <link rel="icon" type="image/svg+xml" href="chameleon-facing-left-svgrepo-com.svg">
+  <link rel="icon" type="image/svg+xml" href="icons/chameleon-facing-left-svgrepo-com.svg">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <style>
     body {
@@ -18,13 +18,20 @@
       flex-direction: column;
       flex: 1;
       min-height: 100vh;
+      margin-left: 200px; /* Offset for fixed sidebar */
     }
     .sidebar {
-      width: 200px;
-      background: #d2eeff;
-      color: #141111;
-      padding: 2rem 1rem;
-      flex-shrink: 0;
+  width: 200px;
+  background: #d2eeff;
+  color: #141111;
+  padding: 2rem 1rem;
+  flex-shrink: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  overflow-y: auto;
+  z-index: 1000;
     }
     .sidebar nav ul {
       list-style: none;
@@ -84,11 +91,14 @@
       justify-content: flex-start;
     }
     .travel-photos img {
-  max-width: 320px;
-      width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-      background: #fff;
+  height: 400px;
+  width: auto;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  background: #fff;
+  object-fit: cover;
+  display: block;
     }
     .caption {
       font-size: 0.95rem;
@@ -141,17 +151,17 @@
       <div class="place-section">
         <div class="place-title">Death Valley</div>
         <div class="travel-photos">
-          <img src="IMG_1923.jpg" alt="dunes">
-          <img src="IMG_1946.jpg" alt="hill">
-          <img src="IMG_1965.jpg" alt="salt flats">
+          <img src="images/IMG_1923.jpg" alt="dunes">
+          <img src="images/IMG_1946.jpg" alt="hill">
+          <img src="images/IMG_1965.jpg" alt="salt flats">
         </div>
-        <div class="caption">December 2022</div>
+        <div class="caption">Dec 2022</div>
       </div>
       <div class="place-section">
         <div class="place-title">Paris</div>
         <div class="travel-photos">
-          <img src="canal_bw.jpg" alt="Canal Saint Martin">
-          <img src="lemon.svg" alt="Lemon Icon">
+          <img src="images/canal_bw.jpg" alt="Canal Saint Martin">
+          <img src="images/lemon.svg" alt="Lemon Icon">
         </div>
         <div class="caption">Canal Saint Martin, June 2025</div>
       </div>
@@ -165,16 +175,20 @@
       <div class="place-section">
         <div class="place-title">Marseille</div>
         <div class="travel-photos">
-          <img src="fig-svgrepo-com.svg" alt="Fig Icon">
+          <img src="images/fig-svgrepo-com.svg" alt="Fig Icon">
         </div>
         <div class="caption">Balboa Park, 2024</div>
       </div>
       <div class="place-section">
         <div class="place-title">Morocco</div>
         <div class="travel-photos">
-          <img src="fig-svgrepo-com.svg" alt="Fig Icon">
+          <img src="images/chef1.JPG" alt="Chefchaouen Landscape 1">
+          <!-- <img src="images/chef2.JPG" alt="Chefchaouen Landscape 2"> -->
+          <img src="images/blue_doors.JPG" alt="Chefchaouen Doors">
+          <img src="images/tangiers_mosque.JPG" alt="Tangiers Mosque">
+          <img src="images/tangiers_expo.JPG" alt="Tangiers Expo">
         </div>
-        <div class="caption">Balboa Park, 2024</div>
+        <div class="caption">Tangiers and Chefchaouen, Feb 2024</div>
       </div>
       <div class="place-section">
         <div class="place-title">Balkans</div>

@@ -113,6 +113,50 @@
       text-align: center;
       background: #d2eeff;
     }
+
+    /* Responsive design for tablets and phones */
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        left: 0;
+        top: 0;
+        padding: 1rem 0.5rem;
+        z-index: auto;
+      }
+      .main-wrapper {
+        margin-left: 0;
+        width: 100%;
+        padding: 0;
+      }
+      .content {
+        padding: 1rem 0.5rem;
+      }
+      .travel-photos img {
+        height: 180px;
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .sidebar {
+        padding: 0.5rem 0.25rem;
+      }
+      .main-wrapper {
+        padding: 0;
+      }
+      .content {
+        padding: 0.5rem 0.25rem;
+      }
+      .travel-photos img {
+        height: 120px;
+      }
+    }
   </style>
 </head>
 <body>
